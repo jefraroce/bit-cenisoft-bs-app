@@ -2,6 +2,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "skipLibCheck": true, // Configuración para no validar los archivos de la carpeta node_modules
     "outDir": "./out-tsc/app",
     "types": []
   },
