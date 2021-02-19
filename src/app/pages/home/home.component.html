@@ -10,19 +10,7 @@
 
   <div class="row">
     <div *ngFor="let book of books" class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
-      <div class="card book shadow-sm">
-        <div class="card-body">
-          <h4 class="book-name text-dark">{{ book.name }}</h4>
-          <figure class="book-cover">
-            <img [src]="book.cover" alt="">
-          </figure>
-          <h5 class="book-value text-primary font-weight-bold">{{ book.unitValue | currency }}</h5>
-          <div class="book-action">
-            <a class="btn btn-secondary" [routerLink]="['/books', book._id]"><span class="material-icons mr-1">visibility</span>Ver</a>
-          </div>
-          <p class="book-description">{{ book.description }}</p>
-        </div>
-      </div>
+      <app-book-card [book]="book"></app-book-card>
     </div>
   </div>
 </div>

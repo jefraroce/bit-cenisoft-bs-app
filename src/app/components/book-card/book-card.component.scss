@@ -1,0 +1,51 @@
+.book .card-body {
+  display: grid;
+  grid-template-areas: 'name name'
+  'cover value'
+  'cover action'
+  'description description';
+  grid-template-columns: 110px auto;
+  gap: 5px;
+}
+
+.book .book-name {
+  grid-area: name;
+}
+
+.book .book-cover {
+  background-color: lightgray;
+  grid-area: cover;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  height: 110px;
+  max-width: 100px;
+}
+
+.book .book-cover img {
+  object-fit: cover;
+  height: 110px;
+  max-width: 100px;
+}
+
+.book .book-value {
+  grid-area: value;
+  text-align: right;
+}
+
+.book .book-action {
+  grid-area: action;
+  text-align: right;
+}
+
+.book .book-description {
+  grid-area: description;
+  text-align: justify;
+  color: var(--dark);
+}
+
+@media all and (max-width: 991px) {
+  .book .card-body {
+    grid-template-columns: auto auto;
+  }
+}
