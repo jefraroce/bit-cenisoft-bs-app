@@ -8,7 +8,11 @@ export class BooksService {
 
   constructor(private http: HttpClient) { }
 
-  getAll() {
-    return this.http.get('http://localhost:3000/books')
+  getAll(params =  {}) {
+    return this.http.get('http://localhost:3000/books', params);
+  }
+
+  getOneById(bookId) {
+    return this.http.get(`http://localhost:3000/books/${bookId}`);
   }
 }
